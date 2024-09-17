@@ -155,7 +155,7 @@ public class Pokemon {
     // Méthode pour calculer les dommages infligés à un autre pokémon
     public int calculerDommage(Pokemon adversaire, Attaque attaque) {
         // Formule pour calculer les dommages infligés à un pokémon
-        double dommages = (((2 * this.niveau / 5.0 + 2) * this.attaque * attaque.getPuissance()) / adversaire.getDefense()) / 50.0 + 2;
+        double dommages = (((2 * this.niveau + 10) / 250.0) * (this.attaque / (double) adversaire.getDefense()) * attaque.getPuissance()) + 2;
         return (int) dommages;
     }
 }
